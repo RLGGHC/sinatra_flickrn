@@ -34,5 +34,5 @@ end
 #---
 
 get '/' do
-  <%= pick_a_photo('elephants') %>
+  pick_a_photo('elephants')
 end
