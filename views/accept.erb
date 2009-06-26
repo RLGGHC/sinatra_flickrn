@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Finding photos on Flickr</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+<link rel="icon" type="image/ico" href="http://rubylearning.com/images/favicon.ico" />
+</head>
+
+<body>
+<div>
+<h1><img src="/images/images.jpg" alt="Finding photos on Flickr" />Finding photos on Flickr</h1>
+
+<h2>Note:</h2>
+<p>We shall use this <b>Sinatra</b> app to find freely reusable photos.</p>
+<p>The Flickr photo-sharing web site has a huge number of photos and provides web services for searching them. Many of the photos are licensed under Creative Commons licenses, which give you permission to reuse the photos under various restrictions.</p>
+<p>Type a name (like "elephants") below, and this web service will find an appropriate picture, and return a thumbnail version of the picture.</p>
+
+<form action="/display" method="post" accept-charset="utf-8">
+  <input type="text" name="post[iname]" id="iname" />
+  
+  <input type="submit" value="Get Image" />
+  <input type="reset" value="Start over" />
+</form>
+</div>
+<div id="footer">
+  <p><b>Attribution</b>: The method used in this Sinatra app is from the Ruby Cookbook, by Lucas Carlson and Leonard Richardson. Copyright 2006 O'Reilly Media, Inc., 0-596-52369-6.</p>
+</div>
+</body>
+</html>

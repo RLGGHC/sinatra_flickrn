@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Finding photos on Flickr</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+<link rel="icon" type="image/ico" href="http://rubylearning.com/images/favicon.ico" />
+</head>
+
+<body>
+<div>
+<h1>Photo from Flickr</h1>
+<p><% @image = pick_a_photo(params['post']['iname']) %>
+<% if @image %>
+  <img src='<%= @image %>' alt='' />
+<% else %>
+  Sorry no image for "<b><%= params['post']['iname'] %></b>" on Flickr.
+<% end %>
+</p>
+<p>Click <a href="/">here</a> to try a new image.</p>
+</div>
+<div id="footer">
+  <p><b>Fun Sinatra App by Rubylearning</b>.</p>
+</div>
+</body>
+</html>

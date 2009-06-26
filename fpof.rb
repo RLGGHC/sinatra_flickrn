@@ -26,13 +26,20 @@ def small_photo_url(photo)
  "http://static.flickr.com/#{server}/#{id}_#{secret}_m.jpg"
 end
 #---
-#p pick_a_photo('elephants')
-# => http://static.flickr.com/32/102580480_506d5865d0_m.jpg
 
-#p pick_a_photo('what-will-happen-tomorrow')
-# => nil
-#---
-
-get '/' do
-  pick_a_photo('elephants')
+not_found do
+  erb :'404'
 end
+
+error do
+  erb :'500'
+end
+
+# http://vivid-flower-63.heroku.com/
+get '/' do
+  erb :accept
+end
+
+post '/display' do
+  erb :show
+end 
