@@ -3,7 +3,7 @@ require 'open-uri'
 require 'rexml/document'
 require 'cgi'
 
-FLICKR_API_KEY = 'Your API Key here'
+FLICKR_API_KEY = '09990d03b665bce30c2af1eacb75ee24'
 #---
 def flickr_call(method_name, arg_map={}.freeze)
   args = arg_map.collect {|k,v| CGI.escape(k) + '=' + CGI.escape(v)}.join('&')
